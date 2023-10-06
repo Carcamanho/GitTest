@@ -1,2 +1,2 @@
 # GitTest
-# Test Godot with git and see whats happening
+Test Godot with git and see whats happening
