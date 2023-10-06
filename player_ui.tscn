@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ay7kb8la23q"]
+
+[ext_resource type="Texture2D" uid="uid://dtflhmsmmnkps" path="res://SamuraiArt/Samurai/CSIdle/Idle_1-1.png.png" id="1_21l2c"]
+
+[node name="PlayerUI" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 123.0
+offset_bottom = 88.0
+
+[node name="Idle1-1_png" type="Sprite2D" parent="."]
+position = Vector2(37, 42)
+texture = ExtResource("1_21l2c")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 62.0
+offset_top = 5.0
+offset_right = 102.0
+offset_bottom = 28.0
+text = "Lives
+"
