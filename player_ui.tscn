@@ -3,22 +3,35 @@
 [ext_resource type="Texture2D" uid="uid://dtflhmsmmnkps" path="res://SamuraiArt/Samurai/CSIdle/Idle_1-1.png.png" id="1_21l2c"]
 
 [node name="PlayerUI" type="Node2D"]
+position = Vector2(385, 216)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
 
-[node name="Panel" type="Panel" parent="."]
-offset_right = 123.0
-offset_bottom = 88.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Idle1-1_png" type="Sprite2D" parent="."]
-position = Vector2(37, 42)
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 74.0
+offset_bottom = 48.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="_life_icon" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
 texture = ExtResource("1_21l2c")
+expand_mode = 2
+stretch_mode = 5
 
-[node name="Label" type="Label" parent="."]
-offset_left = 62.0
-offset_top = 5.0
-offset_right = 102.0
-offset_bottom = 28.0
-text = "Lives
-"
+[node name="_life_number_label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "10"
